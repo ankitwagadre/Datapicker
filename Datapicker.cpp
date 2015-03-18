@@ -99,9 +99,9 @@ void Datapicker::undo()
 {
     if(firstPointPos == pos){
         firstPointPos = 0;
-    }else if(secondPointPos == pos){
+    } else if(secondPointPos == pos){
         secondPointPos = 0;
-    }else if(thirdPointPos == pos){
+    } else if(thirdPointPos == pos){
         thirdPointPos = 0;
     }
     if(pos > 1){
@@ -120,15 +120,15 @@ void Datapicker::mousePressed()
         ellipse[pos++] = scene->addEllipse(scene->x,scene->y,5.0,5.0,blackpen,blackBrush);
         x1 = scene->x;
         y1 = scene->y;
-    }else if(secondPointPos == pos){
+    } else if(secondPointPos == pos){
         ellipse[pos++] = scene->addEllipse(scene->x,scene->y,5.0,5.0,blackpen,blackBrush);
         x2 = scene->x;
         y2 = scene->y;
-    }else if(thirdPointPos == pos){
+    } else if(thirdPointPos == pos){
         ellipse[pos++] = scene->addEllipse(scene->x,scene->y,5.0,5.0,blackpen,blackBrush);
         x3 = scene->x;
         y3 = scene->y;
-    }else if(answerPointPos == pos){
+    } else if(answerPointPos == pos){
         ellipse[pos++] = scene->addEllipse(scene->x,scene->y,5.0,5.0,blackpen,redBrush);
         x4 = scene->x;
         y4 = scene->y;
@@ -164,18 +164,18 @@ void Datapicker::coordinatesOfPoint(double x, double y)
         tan = ((x2 - x1)*(X3 - X1) - (x3 - x1)*(X2 - X1))/((y2 - y1)*(X3 - X1) - (y3 - y1)*(X2 - X1));
         sin = tan/sqrt(1 + tan*tan);
         cos = sqrt(1 - sin*sin);
-    }else{
+    } else{
         sin=1;
         cos=0;
     }
     if((X2 - X1)!=0){
         scaleOfX = (X2 - X1)/((x2 - x1)*cos - (y2 - y1)*sin);
-    }else{
+    } else{
         scaleOfX = (X3 - X1)/((x3 - x1)*cos - (y3 - y1)*sin);
     }
     if((Y2-Y1)!=0){
         scaleOfY = (Y2 - Y1)/((x2 - x1)*sin + (y2 - y1)*cos);
-    }else{
+    } else{
         scaleOfY = (Y3 - Y1)/((x3 - x1)*sin + (y3 - y1)*cos);
     }
     double X4 = X1 + (((x - x1)*cos - (y - y1)*sin)*scaleOfX);
