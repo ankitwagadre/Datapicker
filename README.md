@@ -1,0 +1,2 @@
+# Datapicker
+This open source, digitizing software converts an image file showing a graph or map, into numbers. The image file can come from a scanner, digital camera or screenshot. The numbers can be read on the screen, and written or copied to a spreadsheet.  The process starts with an image file containing a graph or map. You add three axis points to define the axes, then other points along your curve(s).The final result is digitized data that can be used by other tools such as Microsoft Excel and Gnumeric.
